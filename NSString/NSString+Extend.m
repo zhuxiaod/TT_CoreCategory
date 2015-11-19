@@ -181,7 +181,6 @@
 {
     NSString* carRegex = @"^([a-z]|[A-Z]|[0-9]|[\u4e00-\u9fa5])$";
     NSPredicate* carTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", carRegex];
-    ZLog(@"carTest is %@", carTest);
     return [carTest evaluateWithObject:carNo];
 }
 
@@ -278,17 +277,6 @@
     }
 }
 
-+(NSString *)getDeviceMd5ID{
-    
-    NSDictionary *dict = [NSBundle mainBundle].infoDictionary;
-    NSString *str = [dict objectForKey:(__bridge NSString *)kCFBundleIdentifierKey];
-    ZLog(@"%@",str);
-    NSString *iden = [NSString stringWithFormat:@"%@%@",[UserInfoModel shareUserInfo].token,str];
-    ZLog(@"%@",iden);
-    ZLog(@"%@",iden.md5String);
-    
-    return iden.md5String;
-}
 
 
 + (NSData *)decodeWithBase64String:(NSString *)str{

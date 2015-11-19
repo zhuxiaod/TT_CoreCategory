@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "GTMBase64.h"
 @interface NSString (Extend)
 
 /** 删除所有的空格 */
@@ -89,12 +90,7 @@
  *  @return 是否符合符合YES、不符合NO
  */
 + (BOOL)CheckInput:(NSString*)_text;
-/**
- *  获取本机唯一标识(deviceToken + bundleID MD5)
- *
- *  @return md5字符串
- */
-+ (NSString *)getDeviceMd5ID;
+
 
 
 + (NSData *)decodeWithBase64String:(NSString *)str;

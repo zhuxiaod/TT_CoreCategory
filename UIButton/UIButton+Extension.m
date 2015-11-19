@@ -62,7 +62,7 @@
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     [btn setTitle:name forState:UIControlStateNormal];
     [btn setTitle:name forState:UIControlStateSelected];
-    [btn setTitleColor:RGBColor(73, 73, 73) forState:UIControlStateNormal];
+//    [btn setTitleColor:RGBColor(73, 73, 73) forState:UIControlStateNormal];
     [btn setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
     [btn setImage:[UIImage imageNamed:selectedImageName] forState:UIControlStateSelected];
     return btn;
